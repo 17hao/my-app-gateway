@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM nginx:stable
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY ssl /etc/nginx/ssl
 RUN unlink /var/log/nginx/access.log
