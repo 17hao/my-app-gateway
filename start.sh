@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export https_proxy=http://127.0.0.1:8889
+
 docker pull 17hao/my-app-gateway:latest
 
 docker stop my-app-gateway
