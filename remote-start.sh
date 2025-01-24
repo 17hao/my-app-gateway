@@ -10,5 +10,11 @@ docker rm my-app-gateway
 
 docker rmi $(docker images -f "dangling=true" -q)
 
+# === 代理前端应用时需要用到 ===
 # docker network create --driver=bridge --subnet=192.168.100.0/24 nginx
 docker run --name my-app-gateway -d --network=nginx -p 80:80 -p 443:443 17hao/my-app-gateway
+# ==========================
+
+# === 仅代理后端应用 ===
+docker run --name my-app-gateway -p 443:443 17hao/my-app-gateway
+# ====================
