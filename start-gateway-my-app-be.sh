@@ -3,7 +3,7 @@
 export https_proxy=127.0.0.1:8889
 export http_proxy=127.0.0.1:8889
 
-container_name=gateway-my-app-be
+container_name=my-app-gateway
 
 docker pull 17hao/my-app-gateway:latest
 
